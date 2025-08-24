@@ -394,8 +394,7 @@ footer p{
     padding: 15px;
     border-radius: 50px;
    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-   transform: translateY(20px);
-    pointer-events: none;
+   transform: translate(20px);
 }
 #myBtn img {
     height:28px;
