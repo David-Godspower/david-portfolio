@@ -39,12 +39,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-GCYBTVQJ7D');
-    document.getElementById('contactForm').addEventListener('submit', function() {
-  gtag('event', 'contact_form_submission', {
-    'event_category': 'engagement',
-    'event_label': 'Contact Form'
-  });
-});
+    
 </script>
 
 </head>
@@ -198,70 +193,80 @@
     <button id="myBtn"><img src="img/image.png"> </button>
 
 
-   <script>
-     
-  // Select the menu button and nav links
+  <script>
+  // ----------------------
+  // Menu toggle
+  // ----------------------
   const menuBtn = document.querySelector('.menu-btn');
   const navLinks = document.querySelector('.nav-links');
-
-  // Add click event to toggle the active class
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
 
-
-
-  // Get the button
-const goUpBtn = document.getElementById("myBtn");
-
-// Show button only when user scrolls down
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
-    goUpBtn.style.display = "block";
-  } else {
-    goUpBtn.style.display = "none";
-  }
-});
-
-// Scroll to top smoothly on click
-goUpBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  // ----------------------
+  // Scroll-to-top button
+  // ----------------------
+  const goUpBtn = document.getElementById("myBtn");
+  window.addEventListener("scroll", () => {
+    goUpBtn.style.display = window.scrollY > 20 ? "block" : "none";
   });
-});
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const res = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
+  goUpBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ----------------------
+  // Google Analytics Event Tracking
+  // ----------------------
+  // Contact form + GA event
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // GA event
+      gtag('event', 'contact_form_submission', {
+        'event_category': 'engagement',
+        'event_label': 'Contact Form'
+      });
+
+      // Formspree submission
+      const formData = new FormData(contactForm);
+      const res = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        window.location.href = 'thankyou.html';
+      } else {
+        alert('Oops, something went wrong. Try again.');
+      }
     });
-    if (res.ok) {
-      window.location.href = 'thankyou.html';
-    } else {
-      alert('Oops, something went wrong. Try again.');
-    }
-  });
+  }
 
-    document.getElementById('emailLink').addEventListener('click', function() {
-  gtag('event', 'email_click', {
-    'event_category': 'engagement',
-    'event_label': 'Email Link'
-  });
-});
+  // Email click tracking
+  const emailLink = document.getElementById('emailLink');
+  if (emailLink) {
+    emailLink.addEventListener('click', function() {
+      gtag('event', 'email_click', {
+        'event_category': 'engagement',
+        'event_label': 'Email Link'
+      });
+    });
+  }
 
-document.getElementById('whatsappLink').addEventListener('click', function() {
-  gtag('event', 'whatsapp_click', {
-    'event_category': 'engagement',
-    'event_label': 'WhatsApp Link'
-  });
-});
-
-
-   </script>
+  // WhatsApp click tracking
+  const whatsappLink = document.getElementById('whatsappLink');
+  if (whatsappLink) {
+    whatsappLink.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        'event_category': 'engagement',
+        'event_label': 'WhatsApp Link'
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
