@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Godspower Ajala</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Basic SEO -->
+<title>David Godspower Ajala | Portfolio</title>
+<meta name="description" content="Portfolio of David Godspower, a web developer and creative technologist specializing in frontend development, backend systems, and branding solutions.">
+<meta name="keywords" content="David Godspower, web developer, portfolio, frontend, backend, branding, creative developer">
+<meta name="author" content="David Godspower Ajala">
+
+<!-- Mobile Friendly -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph (Social Sharing) -->
+<meta property="og:title" content="David Godspower Ajala | Portfolio">
+<meta property="og:description" content="Check out my portfolio showcasing web development, backend projects, and creative branding works.">
+<meta property="og:image" content="https://david-godspower.github.io/david-portfolio/img/preview.png">
+<meta property="og:url" content="https://david-godspower.github.io/david-portfolio/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="David Godspower Ajala | Portfolio">
+<meta name="twitter:description" content="Explore my portfolio showcasing frontend, backend, and branding projects.">
+<meta name="twitter:image" content="https://david-godspower.github.io/david-portfolio/img/preview.png">
+<!-- Stylesheet -->
+<link rel="stylesheet" href="style.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="img/GP.png">
+
 </head>
 <body>
     <header class="header">
@@ -30,14 +55,16 @@
         </div>
 
         <div class="flex-container">
-            <div class="one"> <img src="img/DGA.png" alt="DGA Profile Picture" id="myImage"></div>
+            <div class="one"> <img src="img/GP.png" alt="GP Profile Picture" id="myImage"></div>
         </div>
    </section>
 
    <!--About-->
    <section id="about" class="about" >
-    <h2>About</h2>
-    <p>David Godspower Ajala is a Student of Computer Engineering at Ladoke Akintola University of Technology, Ogbomoso, Oyo State, Nigeria. He is a Full-Stack Developer, Mobile App Developer, Animator, and a Video Editor. </p><br>
+    <h2>About</h2><br>
+    <p>Hi, I'm David, a passionate <strong>Computer Engineering Student</strong> at <strong>Ladoke Akintola University of Technology, Ogbomoso, Oyo State, Nigeria</strong> and a versatile creative. I specialize in web development, mobile app development, programming, video editing, animation, and branding, helping ideas come alive through technology and design.<br> Beyond tech, I also explore <strong>fashion designing</strong>, blending creativity and innovation to express unique styles. <br> I enjoy learning, building impactful projects, and sharing knowledge with others. My goal is to combine my technical expertise and creative skills to make meaningful contributions in tech, business, and fashion. <br> Currently, I'm focused on improving my programming skills, exploring more in animation, and building a brand that merges tech and design.<br> Let's connect and create something amazing together. </p><br>
+    <button><a href="https://wa.me/+2347026111130" id="btn">Connect with Me</a></button>
+    
    </section>
     
 
@@ -63,6 +90,7 @@
             <li><label for="file" >Communication<br><br> </label><progress id="file" value="60" max="100">60</progress></li><br>
             <li><label for="file" >Teamwork<br><br> </label><progress id="file" value="60" max="100">60</progress></li><br>
             <li><label for="file" >Time Management<br><br> </label><progress id="file" value="40" max="100">40</progress></li><br>
+             <li><label for="file" >Problem Solving<br><br> </label><progress id="file" value="50" max="100">50</progress></li><br>
         </ul>
     </div>
 </section>
@@ -83,11 +111,18 @@
     <a href="https://david-godspower.github.io/budget-tracker/">View Project</a>
     </div>
     <div class="project-card">
+    <img src="img/lion.png" alt="Landing Page">
+    <h3>A Simple Landing Page</h3>
+    <p> A Landing Page that provides information about lions</p>
+    <a href="https://david-godspower.github.io/landing-page/">View Project</a>
+    </div>
+    <!--
+    <div class="project-card">
     <img src="img/lautechpq.png" alt="LautechPQ">
     <h3>LAUTECH Past Questions</h3>
     <p> A Web that provides LAUTECH Past Questions to Students</p>
     <a href="projects/LautechPQ/index.html">View Project</a>
-    </div>
+    </div>-->
     
 </section>
 
@@ -102,37 +137,36 @@
     <button><a href="https://wa.me/+2347026111130" id="btn">Hire Me</a></button>
     </section>
    
-
-    <div class="parent">
-        <section id="message" class="message">
-          <div class="dark">
-            <form class="sendmessage">
-                <fieldset>
-                    <legend><strong>Send a Message</strong></legend>
-                    <div>
-  						<br>	
-                        <input type="name" placeholder="Name" pattern="[A-Za-z\s]+" title="Please use letters only A-Z or a-z" required><br><br>
-  						</div>
-  						<div>
-  							<input type="email" placeholder="Email Address"  required><br><br>
-  						</div>
-                        <div>
-  							<input type="text" class="senmessage" placeholder="Message" required><br><br>
-  						</div>
-  						<div>
-  						<button type="submit">Send</button>
-                </fieldset>
-  						
-					</form>
-          </div>
-        </section>
-         <!-- Contact -->
-    <section id="contact" class="contact">
-  <h2>Get in Touch</h2>
-  <p>Email: <a href="mailto:ajaladavid11@gmail.com">ajaladavid11@gmail.com</a></p>
-  <p>Follow me on <a href="https://web.facebook.com/facebook.comDavidGodpowerAjalaDGA/" target="_blank">Facebook</a></p>
-</section>
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p class="student-tag">💡 I am a student, open to learning and collaborations.</p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ajaladavid11@gmail.com">ajaladavid11@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+2347026111130">+234 702 611 1130</a></p>
+    <p><i class="fas fa-map-marker-alt"></i> Location: Ogbomoso, Nigeria</p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/david-ajala-a93b862a1/" target="_blank">David Ajala</a></p>
     </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form id="contactForm" action="https://formspree.io/f/mblarkab" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+       
+      </form>
+    </div>
+
+  </div>
+</section>
+
 
     
 
@@ -142,14 +176,15 @@
         <p>David Godspower Ajala &copy 2025</p><br>
             <a href="https://github.com/david-godspower" target="_blank"><i class="fab fa-github icons" id="github"></i></a>
             <a href="https://www.linkedin.com/in/david-ajala-a93b862a1/" target="_blank"><i class="fab fa-linkedin icons" id="linkedin"></i></a>
-            <a href="https://web.facebook.com/facebook.comDavidGodpowerAjalaDGA/" target="_blank"><i class="fab fa-facebook icons" id="facebook"></i></a>
+            <a href="https://web.facebook.com/facebook.comDavidGodpowerAjalaGP/" target="_blank"><i class="fab fa-facebook icons" id="facebook"></i></a>
             <a href="https://x.com/ajala28981" target="_blank"><i class="fab fa-x-twitter icons" id="x"></i></a>
             <a href="mailto:ajaladavid11@gmail.com" target="_blank"><i class="fas fa-envelope icons" id="gmail"></i></a>
     </footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to Top"><img src="img/image.png"> </button>
+    <button id="myBtn"><img src="img/image.png"> </button>
 
 
-    <script>
+   <script>
+     
   // Select the menu button and nav links
   const menuBtn = document.querySelector('.menu-btn');
   const navLinks = document.querySelector('.nav-links');
@@ -160,24 +195,44 @@
   });
 
 
-  let mybutton = document.getElementById("myBtn");
-  window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  // Get the button
+const goUpBtn = document.getElementById("myBtn");
+
+// Show button only when user scrolls down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    goUpBtn.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    goUpBtn.style.display = "none";
   }
-}
+});
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-  
-</script>
+// Scroll to top smoothly on click
+goUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const res = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      window.location.href = 'thankyou.html';
+    } else {
+      alert('Oops, something went wrong. Try again.');
+    }
+  });
+
+
+   </script>
 
 </body>
 </html>
