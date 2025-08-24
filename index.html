@@ -73,7 +73,7 @@
    <section id="about" class="about" >
     <h2>About</h2><br>
     <p>Hi, I'm David, a passionate <strong>Computer Engineering Student</strong> at <strong>Ladoke Akintola University of Technology, Ogbomoso, Oyo State, Nigeria</strong> and a versatile creative. I specialize in web development, mobile app development, programming, video editing, animation, and branding, helping ideas come alive through technology and design.<br> Beyond tech, I also explore <strong>fashion designing</strong>, blending creativity and innovation to express unique styles. <br> I enjoy learning, building impactful projects, and sharing knowledge with others. My goal is to combine my technical expertise and creative skills to make meaningful contributions in tech, business, and fashion. <br> Currently, I'm focused on improving my programming skills, exploring more in animation, and building a brand that merges tech and design.<br> Let's connect and create something amazing together. </p><br>
-    <button><a href="https://wa.me/+2347026111130" id="whatsappLink">Connect with Me</a></button>
+    <button><a href="https://wa.me/+2347026111130" id="whatsappAbout">Connect with Me</a></button>
     
    </section>
     
@@ -144,7 +144,7 @@
         <p>Hire me for your project and let's work together to bring your ideas to life!</p>
 
     </div>
-    <button><a href="https://wa.me/+2347026111130" id="whatsappLink" >Hire Me</a></button>
+    <button><a href="https://wa.me/+2347026111130" id="whatsappCTA" >Hire Me</a></button>
     </section>
    
 <section class="contact-section" id="contact">
@@ -245,27 +245,26 @@
     });
   }
 
-  // Email click tracking
-  const emailLink = document.getElementById('emailLink');
-  if (emailLink) {
-    emailLink.addEventListener('click', function() {
-      gtag('event', 'email_click', {
-        'event_category': 'engagement',
-        'event_label': 'Email Link'
-      });
+ // WhatsApp click tracking
+const whatsappAbout = document.getElementById('whatsappAbout');
+if (whatsappAbout) {
+  whatsappAbout.addEventListener('click', function() {
+    gtag('event', 'whatsapp_click', {
+      'event_category': 'engagement',
+      'event_label': 'WhatsApp About Section'
     });
-  }
+  });
+}
 
-  // WhatsApp click tracking
-  const whatsappLink = document.getElementById('whatsappLink');
-  if (whatsappLink) {
-    whatsappLink.addEventListener('click', function() {
-      gtag('event', 'whatsapp_click', {
-        'event_category': 'engagement',
-        'event_label': 'WhatsApp Link'
-      });
+const whatsappCTA = document.getElementById('whatsappCTA');
+if (whatsappCTA) {
+  whatsappCTA.addEventListener('click', function() {
+    gtag('event', 'whatsapp_click', {
+      'event_category': 'engagement',
+      'event_label': 'WhatsApp CTA Section'
     });
-  }
+  });
+}
 </script>
 
 </body>
