@@ -35,7 +35,21 @@ a{
 }
 
 .nav-links {
-    margin-top: 20px;
+    flex-direction: column;
+    background: #1F2937;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 0 20px; /* start collapsed */
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    max-height: 500px; /* enough height to show menu */
+    padding: 20px;
 }
 
 .nav-links a {
@@ -55,6 +69,7 @@ a{
     position: absolute;
     top: 15px;
     right: 20px;
+    z-index: 1100;
 }
 .hero{
         background-color: #1F2937;
@@ -155,7 +170,7 @@ h1{
 }
 .about{
     margin-top:5px;
-    max-width: 50%;
+    max-width: 100%;
     align-items: center;
   margin: 10px auto;
     padding: 50px 20px;
@@ -458,7 +473,6 @@ footer p{
 @media (max-width: 768px) {
     .menu-btn{ display: block;}
     .nav-links{
-        display: none;
         flex-direction: column;
     background: #1F2937;
     position: absolute;
@@ -494,6 +508,3 @@ footer p{
   span { font-size: 36px; }
   .cta { padding: 20px; margin: 20px; }
 }
-
-
-
