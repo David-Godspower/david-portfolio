@@ -35,6 +35,7 @@ a{
 }
 
 .nav-links {
+    display: flex;
     flex-direction: column;
     background: #1F2937;
     position: absolute;
