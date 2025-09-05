@@ -118,7 +118,10 @@ a{
     .hero img{
         max-width:100%;
         height:auto;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1fc6afcb0189d3585557c8789d671bd03e515a04
     }
 .flex-container {
   display: flex;
@@ -127,7 +130,10 @@ a{
   align-items: flex-start;
   margin: 50px 20px;
   gap: 20px;
+<<<<<<< HEAD
   
+=======
+>>>>>>> 1fc6afcb0189d3585557c8789d671bd03e515a04
     
 }
 
@@ -183,6 +189,7 @@ h1{
     height: auto;
   font-size:20px;
 }
+<<<<<<< HEAD
 .pcn{
   color: gold;
   font-weight: 900;
@@ -190,6 +197,9 @@ h1{
 .pcn:hover{
   color: #1F2937;
 }
+=======
+
+>>>>>>> 1fc6afcb0189d3585557c8789d671bd03e515a04
 .skills{
     background-color:#36454f;
     margin-top:5px;
