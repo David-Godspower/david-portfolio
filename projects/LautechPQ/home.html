@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LAUTECH Past Questions | Home</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="sidebaar">
+        <img src="img/lautech.jpeg" alt="Lautech Logo" width="50px">
+        <button id="btn"><strong><a href="home.html" id="btn">HOME</a></strong></button>
+        <button id="btn"><strong><a href="https://wa.me/+2347026111130" id="btn">SEND US MESSAGE</a></button>
+         <button id="btn" onclick="showSection('updates')"><strong>GET UPDATES</strong></button>
+         <button id="btn" onclick="showSection('help')"><strong>HELP</strong></button>
+         <button id="btn" onclick="showSection('sponsors')"><strong>SPONSORS</strong></button>
+         <button id="btn" onclick="showSection('credits')"><strong>CREDITS</strong></button>
+         <button id="btn" onclick="showSection('credits')"><strong>CGPA CALCULATOR</strong></button><br><br><br>
+         <button id="logout">LOGOUT</button>
+
+    </div>
+
+  <h1>LAUTECH Past Questions Portal</h1>
+  <img src="img/lautech.jpeg" alt="Lautech Logo">
+  
+  <div class="container">
+    <!-- Faculty Selection -->
+    <label for="faculty">Select Faculty:</label>
+    <select id="faculty" onchange="loadDepartments()">
+      <option value="">-- Select Faculty --</option>
+      <!-- Add faculty options here -->
+       <option value="agric">Faculty of Agricultural Sciences and Renewable Natural Resources</option>
+     <option value="arts">Faculty of Arts and Social Sciences </option>
+    <option value="basicClinical">Faculty of Basic Clinical Sciences</option>
+    <option value="medical">Faculty of Basic Medical Sciences</option>
+    <option value="clinical">Faculty of Clinical Sciences </option>
+    <option value="computing">Faculty of Computing and Informatics</option>
+    <option value="engineer"> Faculty of Engineering and Technology</option>
+     <option value="environ">Faculty of Environmental Sciences</option>
+     <option value ="food">Faculty of Food and Consumer Sciences</option>
+    <option value="nur">Faculty of Nursing</option>
+   <option value="manage">Faculty of Management Sciences </option>
+   <option value="pure">Faculty of Pure and Applied Sciences </option>
+    </select>
+
+    <!-- Department Selection -->
+    <label for="department">Select Department:</label>
+    <select id="department" onchange="loadLevels()" style="display:none;">
+      <option value="">-- Select Department --</option>
+    </select>
+
+    <!-- Level Selection -->
+    <label for="levels">Select Level:</label>
+    <select id="levels" onchange="loadYears()" style="display:none;">
+      <option value="">-- Select Level --</option>
+    </select>
+
+    <!-- Year Selection -->
+    <label for="year">Select Year:</label>
+    <select id="year" onchange="loadCourses()" style="display:none;">
+      <option value="">-- Select Year --</option>
+    </select>
+
+    <!-- Courses Section -->
+    <div id="course-list" style="display:none;"></div>
+  </div>
+  
+  <br><br><br>
+  
+  <!-- Get Updates Section -->
+  <section id="updates" class="sidebarr"  style="display:none;">
+          <div class="dark">
+            <h3 style="text-align:center;">Get Updates</h3>
+            <form class="update" onsubmit="handleUpdates(event)">
+  						<div>
+  							<label>Name</label><br>
+  							<input type="name" placeholder="Name" pattern="[A-Za-z\s]+" title="Please use letters only A-Z or a-z" required>
+  						</div>
+  						<div>
+  							<label>Email</label><br>
+  							<input type="email" placeholder="Email Address" id="update-email" required>
+  						</div>
+  						<div>
+  						<button class="button_1" type="submit">Send</button>
+					</form>
+          </div>
+        </section>
+        
+        
+        <!-- Help Section -->
+        <div id="help" style="display:none;">
+            <h2>HELP CENTER</h2>
+
+<input
+  type="search"
+  id="helpSearch"
+  placeholder="Search help topics…"
+  autocomplete="off"
+/>
+
+<p id="noMatch" style="display:none; color:#d00;">No help topics found.</p>
+<div id="helpAccordion">
+<ul id="helpAccordion">
+  <!-- Topic 1 -->
+  <li>
+    <button class="help-btn" data-target="help-register">
+     <strong> How to register an account</strong>
+    </button>
+    <div class="help-content" id="help-register">
+      <p>Click <strong><a href="index.html#register">REGISTER</a></strong> on the login page, fill in your details, confirm your password, then press <em>Create Account</em>.</p>
+    </div>
+  </li>
+  <!-- Topic 2 -->
+  <li>
+      <button class="help-btn" data-target="help-login">
+          <strong>How to Log In</strong>
+      </button>
+      <div class="help-content" id="help-login">
+          <p>On the <strong><a href="index.html">homepage</a></strong>, enter your email and password, then click <strong>LOGIN. </strong></p>
+      </div>
+  </li>
+  
+  
+   <!-- Topic 3 -->
+  <li>
+      <button class="help-btn" data-target="help-forgotpassword">
+          <strong>Forgot Password?</strong>
+      </button>
+      <div class="help-content" id="help-forgotpassword">
+          <p>Click on <strong><a href="index.html#forgot">Forgot Password?</a></strong> under the login form. Enter your email and click <em>Send Reset Link</em>. A confirmation message will appear.</p>
+      </div>
+  </li>
+
+
+
+
+<!-- Topic 4 -->
+<li>
+    <button class="help-btn" data-target="help-getupdates">
+        <strong>How to Get Updates</strong>
+    </button>
+    <div class="help-content" id="help-getupdates">
+    <p>Click on <strong><a href="#updates">Get Updates</a></strong> in the sidebar. Enter your name and email address and click <em>Send</em>. You will receive notifications when past questions are added. </p>
+    </div>
+</li>
+
+
+
+
+  <!-- Topic 5 -->
+  <li>
+    <button class="help-btn" data-target="help-select">
+     <strong>How to select Faculty, Department, Level  and Year</strong>
+    </button>
+    <div class="help-content" id="help-select">
+      <p>From the <strong><a href="home.html">homepage</a></strong> select your <strong>Faculty</strong>, choose your <strong>Department</strong>, select your <strong>Level</strong>(e.g 100,200), select the  <strong>Academic Year</strong> of the past questions of the courses you want . The available courses and past questions will appear.</p>
+    </div>
+  </li>
+
+  <!-- Topic 6 -->
+  <li>
+    <button class="help-btn" data-target="help-download">
+     <strong>How to Download Past Questions </strong>
+    </button>
+    <div class="help-content" id="help-download">
+      <p>After selecting your faculty, department, level and year a list of courses will appear. Click any course name to download the <strong>PDF </strong> of the past question</p>
+    </div>
+  </li>
+  
+   <!-- Topic 7 -->
+  <li>
+      <button class="help-btn" data-target="help-logout">
+          <strong>How to Log Out</strong>
+      </button>
+      <div class="help-content" id="help-logout">
+          <p>Click on the <strong><a href="home.html#logout">LOGOUT</a></strong> button at the bottom of the sidebar. You will be returned to the <strong>LOGIN </strong>page</p>
+      </div>
+  </li>
+  
+  <!-- Topic 8 -->
+  <li>
+      <button class="help-btn" data-target="help-contact">
+          <strong>Contact or Ask Questions</strong>
+      </button>
+      <div class="help-content" id="help-contact">
+          <p>Click  <strong><a href="#btn">SEND US MESSAGE</a></strong> button at the bottom of the sidebar. You will be redirected to <em>WhatsApp </em>where you can chat with the admin for any issues.</p>
+      </div>
+  </li>
+  
+  
+    <!-- Topic 9 -->
+  <li>
+      <button class="help-btn" data-target="help-use">
+          <strong>Who can use this portal?</strong>
+      </button>
+      <div class="help-content" id="help-use">
+          <p>Any <strong><a href="#btn">LAUTECH</a></strong> students, especially undergraduates across all faculties, can use the portal to access past questions.</p>
+      </div>
+  </li>
+  
+  
+  <!-- Topic 10 -->
+  <li>
+      <button class="help-btn" data-target="help-trouble">
+          <strong>Troubleshooting Tips</strong>
+      </button>
+      <div class="help-content" id="help-trouble">
+          <p>If nothing loads make sure you have selected all drop-downs. Make sure you are connected to the internet. Ensure your browser is up to date. Refresh the page if anything seems stuck.</p>
+      </div>
+  </li>
+  
+  
+  
+</ul>
+</div>
+</div>
+
+<br><br><br>
+
+
+
+
+
+
+<!-- Sponsors Section -->
+<div id="sponsors" style="display:none">
+    <h2>SPONSORS</h2>
+    <ul id="sponsorslists">
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+    </ul>
+    
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Credits Section -->
+<div id="credits" style="display:none">
+    <h2>CREDITS</h2>
+    <ul id="creditslists">
+        <li><strong><a href="https://www.facebook.com/SamsonAyangoke">Pastor Samson Ayangoke </a></strong></li>
+        <li><strong><a href="https://www.facebook.com/lautechofficial">Ladoke Akintola University of Technology, Ogbomoso</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+        <li><strong><a href="https://www.facebook.com/DavidGodpower">David Godspower Ajala</a></strong></li>
+    </ul>
+    
+</div>
+
+
+
+  <footer>
+    Developed and Designed by <strong><a href="https://www.facebook.com/DavidGodpower" target="_blank">David Godspower Ajala</a></strong> &copy; 2025
+  </footer>
+  <p id="courseList"><strong></strong></p>
+  <script src="js/script.js"></script>
+</body>
+</html>
