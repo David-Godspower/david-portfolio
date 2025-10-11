@@ -114,7 +114,13 @@ a{
     button:hover{
         color:black;
     }
-
+    #download-cv{
+      color: black;
+      margin-top:20px;
+    }
+    #download-cv:hover{
+      color: white;
+    }
     .hero img{
         max-width:100%;
         height:auto;
