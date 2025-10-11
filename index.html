@@ -109,6 +109,7 @@
         <div class="hero-text">
                 <h1>Hello, I am <br><span> David Godspower Ajala (D.G.A.)</span></h1>
                 <p>Software Developer</p>
+                <button id="download-cv">Download my CV</button>
                 <button><a href="#projects">View my Projects</a> </button>
         </div>
 
@@ -362,6 +363,25 @@ if (whatsappCTA) {
       'event_category': 'engagement',
       'event_label': 'WhatsApp CTA Section'
     });
+  });
+}
+
+// Download CV button tracking
+const downloadCvBtn = document.getElementById('download-cv');
+if (downloadCvBtn) {
+  downloadCvBtn.addEventListener('click', function() {
+    gtag('event', 'download_cv', {
+      'event_category': 'engagement',
+      'event_label': 'Download CV Button'
+    });
+    // Trigger file download
+    const link = document.createElement('a');
+    link.href = 'files/David_Godspower_Ajala_CV.pdf'; // Update with your CV file path
+    link.download = 'David_Godspower_Ajala_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    alert('Thank you for downloading my CV!');
   });
 }
 </script>
