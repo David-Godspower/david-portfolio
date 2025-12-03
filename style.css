@@ -18,28 +18,54 @@ html, body {
 /* Full-screen loader */
 #loader {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff; /* or any background */
+  background-color: gold;
   display: flex;
+  flex-direction: column; /* stack message and spinner */
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1F2937;
+  text-align: center;
 }
-
+#loader h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
 /* Spinner */
-#loader::after {
-  content: "";
+.spinner {
+  margin-top: 20px; /* space between message and spinner */
   width: 50px;
   height: 50px;
   border: 5px solid #f3f3f3;
-  border-top: 5px solid gold; /* color of the spinner */
+  border-top: 5px solid #1F2937; 
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loader {
+  transition: opacity 0.5s ease;
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#Image{
+    width:150px;
+    height:auto;
+    border-radius: 55%;
+    margin-bottom: 20px;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

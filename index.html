@@ -92,7 +92,11 @@
 <body>
   <!-- Loader -->
 <div id="loader">
+  <h2>Welcome to David Godspower Ajala's Portfolio</h2>
   <p>I welcome you to my page.</p>
+   <img src="img/dga.png" alt="D.G.A. - David Godspower Ajala Image" id="Image">
+  <div class="spinner"></div>
+
 </div>
   <main id="content" style="display:none;">
     <header class="header">
@@ -293,13 +297,16 @@
 
   <script>
   // Loader
-  window.addEventListener('load', function() {
-    setTimeout(function(){
-      const loader = document.getElementById('loader');
-      const content = document.getElementById('content');
-      loader.style.display = 'none';
-      content.style.display = 'block';
-    }, 1000); // Simulate a 1 second loading time
+   // Wait until the DOM is loaded (safe for GitHub Pages)
+  document.addEventListener("DOMContentLoaded", function() {
+    // Show loader for at least 3 seconds
+    setTimeout(function() {
+      var loader = document.getElementById("loader");
+      var content = document.getElementById("content");
+
+      if(loader) loader.style.display = "none"; // hide loader
+      if(content) content.style.display = "block"; // show content
+    }, 3000); // 3 seconds
   });
   // ----------------------
   // Menu toggle
