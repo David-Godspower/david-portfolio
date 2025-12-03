@@ -90,6 +90,9 @@
 
 </head>
 <body>
+  <!-- Loader -->
+<div id="loader"></div>
+  <main id="content" style="display:none;">
     <header class="header">
         <div class="menu-btn">
             <i class="fas fa-bars"></i>
@@ -163,7 +166,7 @@
 <!-- Projects -->
 <section id="projects" class="projects">
     <div class="project-card">
-    <img src="img/powercreative.png" alt="Power Creative Network">
+    <img src="img/powercreative.png" alt="Power Creative Network" loading="lazy">
     <h3>Power Creative Network</h3>
     <p> The website for PCN, a platform that makes your brand come to life though animation.</p>
     <a href="https://david-godspower.github.io/power-creative-network/">View Project</a>
@@ -267,6 +270,7 @@
 
   </div>
 </section>
+  </main>
 
 
     
@@ -280,11 +284,21 @@
             <a href="https://web.facebook.com/facebook.comDavidGodpowerAjalaDGA/" target="_blank"><i class="fab fa-facebook icons" id="facebook"></i></a>
             <a href="https://x.com/ajala28981" target="_blank"><i class="fab fa-x-twitter icons" id="x"></i></a>
             <a href="mailto:ajaladavid11@gmail.com" target="_blank"><i class="fas fa-envelope icons" id="gmail"></i></a>
+              <a href="https://x.com/ajala28981" target="_blank"><i class="fab fa-x icons" id="x"></i></a>&nbsp;&nbsp;&nbsp;
     </footer>
     <button id="myBtn"><img src="img/image.png"> </button>
 
 
   <script>
+  // Loader
+  window.addEventListener('load', function() {
+    setTimeout(function(){
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('content');
+      loader.style.display = 'none';
+      content.style.display = 'block';
+    }, 1000); // Simulate a 1 second loading time
+  });
   // ----------------------
   // Menu toggle
   // ----------------------
