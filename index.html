@@ -120,7 +120,7 @@
                 <h1>Hello, I am <br><span> David Godspower Ajala (D.G.A.)</span></h1>
                 <p>Software Developer</p>
                 <button id="download-cv">Download my CV</button>
-                <button><a href="#projects">View my Projects</a> </button>
+                <button><a href="David_Godspower_Ajala_CV.html">View my resume</a> </button>
         </div>
 
         <div class="flex-container">
@@ -436,8 +436,8 @@ if (downloadCvBtn) {
     });
     // Trigger file download
     const link = document.createElement('a');
-    link.href = 'files/David_Godspower_Ajala_CV.pdf'; // Update with your CV file path
-    link.download = 'David_Godspower_Ajala_CV.pdf';
+    link.href = 'files/David Godspower Ajala - Resume.pdf'; //CV file path
+    link.download = 'David Godspower Ajala - Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
