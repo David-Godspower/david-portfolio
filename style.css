@@ -75,7 +75,6 @@ html, body {
 header {
     background-color:#1F2937;
     padding: 10px 20px;
-    overflow: auto;
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -137,7 +136,7 @@ a{
     font-size: 28px;
     color: white;
     cursor: pointer;
-    position: absolute;
+    
     top: 15px;
     right: 20px;
     z-index: 1100;
