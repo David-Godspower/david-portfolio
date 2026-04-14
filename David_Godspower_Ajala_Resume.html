@@ -5,321 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Godspower Ajala - Resume</title>
     <style>
-      /* General Reset */
-      * {
-        box-sizing: border-box;
-      }
+      /* Using a condensed system font stack to prevent a "squashed" look */
+      * { box-sizing: border-box; }
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to right, #f4f4f4, #f4f4f4);
-        color: #333;
-        font-size: 12px;
+        font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        margin: 0; padding: 0;
+        background: #fff;
+        color: #1a1a1a;
+        font-size: 10px; 
+        line-height: 1.4; 
+        letter-spacing: -0.01em;
       }
-
-      /* Layout */
-      .container {
-        display: flex;
-        width: 100%;
-        max-width: 1000px;
+      .resume-container {
+        max-width: 850px;
         margin: 0 auto;
-        background: white;
+        padding: 30px 50px; 
       }
 
-      /* Left Sidebar */
-      .left-col {
-        width: 30%;
-        background-color: #2c3e50;
-        color: white;
-        padding: 25px 15px;
-        min-height: 100vh;
+      header {
+        text-align: center;
+        border-bottom: 2px solid #0f172a;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
       }
-      .left-col h3 {
-        border-bottom: 1px solid #3498db;
-        padding-bottom: 3px;
-        margin-top: 18px;
-        margin-bottom: 8px;
-        font-size: 0.95rem;
+      h1 { margin: 0; font-size: 24px; text-transform: uppercase; color: #0f172a; font-weight: 800; }
+      .headline { font-size: 14px; color: #3b82f6; font-weight: 600; margin-top: 2px; }
+      .contact-info { font-size: 10.5px; color: #64748b; margin-top: 5px; }
+      .contact-info a { color: #2563eb; text-decoration: none; margin: 0 8px; }
+
+      section { margin-bottom: 18px; } 
+      h3 {
+        font-size: 11px;
         text-transform: uppercase;
+        color: #0f172a;
+        background: #f8fafc;
+        padding: 4px 10px;
+        border-left: 4px solid #3b82f6;
+        margin-bottom: 10px;
         letter-spacing: 1px;
       }
-      .left-col p,
-      .left-col li {
-        font-size: 0.85rem;
-        line-height: 1.35;
-        margin-bottom: 6px;
-        color: #ecf0f1;
+
+      .item-header { display: flex; justify-content: space-between; font-weight: 700; color: #1e293b; font-size: 12.5px; }
+      .item-sub { font-style: italic; color: #475569; margin-bottom: 4px; display: block; font-weight: bold;}
+      
+      ul { margin: 4px 0 10px 0; padding-left: 18px; }
+      li { margin-bottom: 3px; }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px 25px;
       }
-      .left-col a {
-        color: #3498db;
-        text-decoration: none;
+      .skill-cat { font-weight: 700; color: #0f172a; }
+      
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
       }
-      .left-col ul {
-        padding-left: 15px;
-        margin: 0;
+      .project-item { border-bottom: 1px solid #f1f5f9; padding-bottom: 5px; }
+      .project-title { font-weight: 700; color: #1e293b; font-size: 12px; }
+      .project-link { font-size: 9px; color: #2563eb; text-decoration: none; font-weight: 700; margin-left: 6px; text-transform: uppercase; }
+          
+      .project-item ul {
+          font-size: 9.5px;
+          color: #475569;
       }
 
-      /* Right Main Content */
-      .right-col {
-        width: 70%;
-        padding: 25px 30px;
+
+      .project-link:hover {
+          background-color: #3b82f6;
+          color: white;
+          transition: 0.2s;
       }
 
-      .header h1 {
-        margin: 0;
-        font-size: 2rem;
-        color: #2c3e50;
-        text-transform: uppercase;
-        line-height: 1;
-      }
-      .header h2 {
-        margin: 5px 0 12px 0;
-        font-size: 1.1rem;
-        color: #7f8c8d;
-        font-weight: normal;
-      }
-
-      /* Section Headers */
-      .section-title {
-        font-size: 1rem;
-        color: #2c3e50;
-        border-bottom: 2px solid #bdc3c7;
-        padding-bottom: 2px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-
-      /* Experience & Projects */
-      .job,
-      .project-item {
-        margin-bottom: 8px;
-      }
-      .job-title {
-        font-weight: bold;
-        font-size: 0.95rem;
-        color: #2980b9;
-      }
-      .company {
-        font-style: italic;
-        color: #555;
-        display: inline-block;
-        margin-left: 5px;
-      }
-      .project-item strong {
-        color: #2c3e50;
-        font-weight: bold;
-      }
-      .project-link {
-        font-size: 0.8rem;
-        color: #2980b9;
-        text-decoration: none;
-        margin-left: 5px;
-      }
-
-      p {
-        margin: 2px 0 4px 0;
-        line-height: 1.4;
-      }
-      ul {
-        margin: 2px 0 4px 0;
-      }
-      li {
-        margin-bottom: 1px;
-      }
-
-      /* Soft Skills Section (Compact) */
-      .soft-skills {
-        font-size: 0.85rem;
-        color: #555;
-        font-style: italic;
-        margin-top: 5px;
-      }
-
-      /* Print Settings */
       @media print {
-        @page {
-          margin: 0;
-          size: auto;
-        }
-        body {
-          -webkit-print-color-adjust: exact;
-        }
+        body { margin: 0; }
+        .resume-container { padding: 20px 40px; width: 100%; }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="left-col">
-        <h3 style="margin-top: 0">Contact</h3>
-        <p>
-          📍 Nigeria<br />
-          📞 +234 702 611 1130<br />
-          📧 ajaladavid11@gmail.com
-        </p>
-        <p>
-          🌐
-          <a href="https://davidgodspowerajala.me"
-            >Portfolio</a
-          ><br />
-          💻 <a href="https://github.com/david-godspower">GitHub</a><br />
-          🔗
-          <a href="https://www.linkedin.com/in/david-godspower-ajala"
-            >LinkedIn</a
-          >
-        </p>
-
-        <h3>Education</h3>
-        <p>
-          <strong>B.Tech – Computer Engineering</strong><br />
-          LAUTECH, Ogbomoso<br />
-          2022 – 2027 (In View)
-        </p>
-
-        <h3>Technical Skills</h3>
-        <p>
-          <strong>Frontend:</strong><br />
-          HTML5, CSS3, JS (ES6+), React, Next.js, DOM Manipulation
-        </p>
-        <p>
-          <strong>Backend:</strong><br />
-          Java (Intermediate), Python (Intermediate), REST APIs (Intro)
-        </p>
-        <p>
-          <strong>Mobile:</strong><br />
-          Android Development (Kotlin, Android Studio, Gradle)
-        </p>
-        <p>
-          <strong>Tools:</strong><br />
-          Git, GitHub, VS Code
-        </p>
-        <p>
-          <strong>AI & Workflow:</strong><br />
-          Code optimization with LLMs (ChatGPT, Gemini).
-        </p>
-        <p>
-          <strong>Currently Learning:</strong><br />
-          Android Development (Kotlin), Data Structures & Algorithms (LeetCode)
-        </p>
-
-        <h3>Languages & Volunteer</h3>
-        <p>
-          <strong>English:</strong> Fluent<br />
-          <strong>Yoruba:</strong> Native
-        </p>
-        <p>
-          <strong>Volunteer:</strong> Tech community events and coding
-          bootcamps.
-        </p>
-        <p><strong>Hobbies:</strong> Animation, Tech Blogging, Open Source.</p>
-      </div>
-
-      <div class="right-col">
-        <div class="header">
-          <h1>David Godspower Ajala</h1>
-          <h2>Software Engineer | Computer Engineering Student</h2>
+    <div class="resume-container">
+      <header>
+        <h1>David Godspower Ajala</h1>
+        <div class="headline">Software Engineer | Computer Engineering Student</div>
+        <div class="contact-info">
+          Nigeria • +234 702 611 1130 • ajaladavid11@gmail.com<br>
+          <a href="https://davidgodspowerajala.me">Portfolio Site</a> | 
+          <a href="https://github.com/david-godspower">GitHub</a> | 
+          <a href="https://www.linkedin.com/in/david-godspower-ajala">LinkedIn</a>
         </div>
+      </header>
 
-        <div class="section-title">Profile Summary</div>
-        <p>
-          Computer Engineering student and Software Engineer with strong hands-on experience building logic-driven web applications. Highly skilled in HTML, CSS, JavaScript, and React, with a proven track record of building dynamic, API-integrated platforms. Currently completing my SIWES at the Oyo State Secretariat, blending enterprise IT infrastructure experience with modern frontend development. Known for a disciplined workflow with 300+ GitHub contributions in 2025 and continuous open-source project development.
-        </p>
+      <section>
+        <h3>Professional Profile</h3>
+        <p style="margin:0;">Dynamic Software Engineer and Computer Engineering student with a focus on building robust, logic-driven web applications. Expert in modern JavaScript frameworks and React, with a proven history of developing API-integrated platforms. Currently bridging enterprise IT infrastructure with networking at the Oyo State Secretariat. Driven by a disciplined engineering workflow, evidenced by 300+ GitHub contributions in 2025 and a commitment to continuous open-source innovation.</p>
+      </section>
 
-        <div class="section-title">Experience</div>
-        <div class="job">
-          <span class="job-title">IT Support & Networking Intern (SIWES)</span> |
-          <span class="company">Management Information Centre (MIC), Governor's Office, Oyo State Secretariat</span>
-          <ul>
-            <li>Undergoing practical training in IT operations with a primary focus on enterprise network infrastructure and Cisco networking fundamentals.</li>
-            <li>Work alongside system engineers to maintain computer hardware, troubleshoot physical networks, and execute OS/software installations.</li>
-            <li>Provide cross-departmental field support, resolving live system issues and ensuring maximum uptime for government workstations.</li>
-          </ul>
+      <section>
+        <h3>Technical Expertise</h3>
+        <div class="skills-grid">
+          <div><span class="skill-cat">Frontend:</span> HTML5, CSS3, JS (ES6+), React, Next.js, DOM Manipulation</div>
+          <div><span class="skill-cat">Backend:</span> Java, Python, REST APIs (Integration)</div>
+          <div><span class="skill-cat">Mobile:</span> Android Development (Kotlin, Android Studio, Gradle)</div>
+          <div><span class="skill-cat">Tools:</span> Git, GitHub, VS Code, CI/CD Basics</div>
+          <div><span class="skill-cat">AI Workflow:</span> Prompt Engineering, Code Optimization with LLMs</div>
+          <div><span class="skill-cat">Current Study:</span> Data Structures & Algorithms (LeetCode)</div>
         </div>
-        <div class="job">
-          <span class="job-title">Frontend Developer Intern</span> |
-          <span class="company">Google Developer Groups On Campus (GDGOC) LAUTECH</span>
-          <ul>
-            <li>Collaborating within the engineering team to build community-focused web applications using Next.js and JavaScript (ES6+).</li>
-            <li>Optimizing platform accessibility and user engagement through high standards for UI/UX and frontend performance.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <span class="job-title">Founder & Creative Branding Animator</span> |
-          <span class="company">Power Creative Network</span>
-          <ul>
-            <li>Created 2D & 3D animations and visual branding campaigns to help businesses communicate effectively.</li>
-            <li>Combined technical thinking with creative UI/UX principles for digital storytelling.</li>
-          </ul>
-        </div>
+      </section>
 
-        <div class="section-title">Selected Projects</div>
-
-        <div class="project-item">
-          <strong>MindXam</strong>
-          <a
-            href="https://david-godspower.github.io/MindXam/"
-            class="project-link" target="_blank"
-            >[View Live]</a
-          ><br />
-          <ul>
-            <li>Built a dynamic web-based quiz application utilizing the Open Trivia DB API to fetch and render real-time trivia questions.</li>
-            <li>Handled state management and dynamic DOM updates using modern JavaScript logic for a seamless user experience.</li>
-          </ul>
+      <section>
+        <h3>Professional Experience</h3>
+        <div class="item-header">
+          <span>IT Support & Networking Intern (SIWES)</span>
+          <span>March 2026 – Present</span>
         </div>
+        <span class="item-sub">Management Information Centre (MIC), Governor's Office, Oyo State Secretariat</span>
+        <ul>
+          <li>Undergoing practical training in IT operations with a primary focus on enterprise network infrastructure and Cisco networking fundamentals.</li>
+          <li>Work alongside system engineers to maintain computer hardware, troubleshoot physical networks, and execute OS/software installations.</li>
+          <li>Provide cross-departmental field support, resolving live system issues and ensuring maximum uptime for government workstations.</li>
+        </ul>
 
-        <div class="project-item">
-          <strong>Real-Time Weather App</strong>
-          <a
-            href="https://david-godspower.github.io/weather-app"
-            class="project-link" target="_blank"
-            >[View Live]</a
-          ><br />
-          <ul>
-            <li>Developed a responsive weather dashboard that integrates live external weather APIs.</li>
-            <li>Engineered a dynamic UI feature allowing users to toggle seamlessly between temperature units.</li>
-          </ul>
+        <div class="item-header">
+          <span>Frontend Developer Intern</span>
+          <span>March 2026 - Present</span>
         </div>
+         <span class="item-sub">Google Developer Groups On Campus (GDGOC) LAUTECH</span>
+        <ul>
+          <li>Collaborating within the engineering team to build community-focused web applications using Next.js and JavaScript (ES6+).</li>
+          <li>Optimizing platform accessibility and user engagement through high standards for UI/UX and frontend performance.</li>
+        </ul>
 
-        <div class="project-item">
-          <strong>PurchasePalace (In Progress)</strong>
-          <a
-            href="https://david-godspower.github.io/purchasepalace/"
-            class="project-link" target="_blank"
-            >[View Live]</a
-          ><br />
-          <ul>
-            <li>Designed a responsive e-commerce interface with structured product layouts, focusing on scalability and UI/UX optimization.</li>
-          </ul>
+        <div class="item-header">
+          <span>Founder & Creative Branding Animator</span>
+          <span>April 2024 - Present</span>
         </div>
+         <span class="item-sub">Power Creative Network</span>
+        <ul>
+          <li>Created 2D & 3D animations and visual branding campaigns to help businesses communicate effectively.</li>
+          <li>Combined technical thinking with creative UI/UX principles for digital storytelling.</li>
+        </ul>
+      </section>
 
-        <div class="project-item">
-          <strong>Budget Tracker</strong>
-          <a
-            href="https://david-godspower.github.io/budget-tracker/"
-            class="project-link" target="_blank"
-            >[View Live]</a
-          ><br />
-          <ul>
-            <li>Developed a real-time financial tracking app using JavaScript for dynamic income and expense calculations, and UI updates.</li>
-          </ul>
-        </div>
+      <section>
+        <h3>Technical Projects</h3>
+        <div class="project-grid">
+          <div class="project-item">
+            <span class="project-title">MindXam</span> 
+            <a href="https://david-godspower.github.io/MindXam/" class="project-link" target="_blank">[View Live]</a>
+            <ul>
+              <li>Built a dynamic web-based quiz application utilizing the Open Trivia DB API to fetch and render real-time trivia questions.</li>
+              <li>Handled state management and dynamic DOM updates using modern JavaScript logic for a seamless user experience.</li>
+            </ul>
+          </div>
 
-        <div class="project-item">
-          <strong>Utility Apps:</strong>
-          <a href="https://github.com/david-godspower" class="project-link" target="_blank"
-            >[View GitHub]</a
-          ><br />
-          Built a Task Manager, Digital Library Manager, Interactive Greeting Card, Responsive Auth UI,
-          Logic Calculator, and tic tac toe to practice advanced DOM manipulation.
-        </div>
+          <div class="project-item">
+            <span class="project-title">Real-Time Weather App</span> 
+            <a href="https://david-godspower.github.io/weather-app" class="project-link" target="_blank">[View Live]</a>
+            <ul>
+              <li>Developed a responsive weather dashboard that integrates live external weather APIs.</li>
+              <li>Engineered a dynamic UI feature allowing users to toggle seamlessly between temperature units.</li>
+            </ul>
+          </div>
 
-        <div class="section-title">Additional Information</div>
-        <div class="soft-skills">
-          • Strong willingness to learn, improve, and collaborate effectively within fast-paced tech environments.
+          <div class="project-item">
+            <span class="project-title">PurchasePalace (In Progress)</span> 
+            <a href="https://david-godspower.github.io/purchasepalace/" class="project-link" target="_blank">[View Live]</a>
+            <ul>
+              <li>Designed a responsive e-commerce interface with structured product layouts, focusing on scalability and UI/UX optimization.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <span class="project-title">Budget Tracker</span> 
+            <a href="https://david-godspower.github.io/budget-tracker/" class="project-link" target="_blank">[View Live]</a>
+            <ul>
+              <li>Developed a real-time financial tracking app using JavaScript for dynamic income and expense calculations.</li>
+            </ul>
+          </div>
         </div>
-      </div>
+        <div style="margin-top: 10px;">
+          <span class="project-title">Utility Suite</span> 
+          <a href="https://github.com/David-Godspower?tab=repositories" class="project-link" target="_blank">[View GitHub]</a>
+          <p style="margin: 4px 0 0 18px; line-height: 1.4;">Built a Task Manager, Digital Library Manager, and Logic Calculator to master advanced DOM manipulation and logic flow.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="item-header">
+          <span>B.Tech – Computer Engineering</span>
+          <span>2022 – 2027 (In View)</span>
+        </div>
+        <span class="item-sub">Ladoke Akintola University of Technology, Ogbomoso</span>
+      </section>
+
+      <section style="margin-bottom:0;">
+        <h3>Additional Information</h3>
+        <p style="margin:0;"><strong>Languages:</strong> English (Fluent), Yoruba (Native) • <strong>Volunteer:</strong> Tech community events and coding bootcamps • <strong>Hobbies:</strong> Animation, Tech Blogging, Open Source.</p>
+      </section>
     </div>
   </body>
 </html>
