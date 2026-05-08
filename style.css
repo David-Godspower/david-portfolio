@@ -292,9 +292,7 @@ progress{
     height:10px;
     border-radius: 10px;
     margin-left:20px;
-    /* fallback background */
     background-color: gold;
-    /* Remove default appearance for better styling */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
