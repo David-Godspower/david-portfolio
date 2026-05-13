@@ -19,6 +19,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 body {
@@ -533,6 +536,15 @@ footer p i{
   .hero-image img { width: 100%; max-width: 280px; margin-top: 0; }
   .hero-text{margin-top: 10px;}
 
+  .contact-box {
+    padding: 40px 20px;
+    width: 100%;
+  }
+  .contact-box h2 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem); 
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
   .contact-container { grid-template-columns: 1fr; }
   
   .project-card { flex-direction: column !important; padding: 20px; }
