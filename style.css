@@ -17,6 +17,11 @@
   box-sizing: border-box;
 }
 
+body, html {
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -34,6 +39,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
 }
+
 a, 
 button, 
 .btn, 
