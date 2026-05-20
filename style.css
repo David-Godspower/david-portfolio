@@ -306,6 +306,7 @@ section { padding: 100px 8%; }
 }
 .project-content h3 { font-size: 1.8rem; margin-bottom: 15px; }
 .project-content p { color: var(--text-muted); }
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
