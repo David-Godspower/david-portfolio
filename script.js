@@ -17,6 +17,18 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+document.addEventListener("click", (e) => {
+  const navLinks = document.getElementById("navLinks");
+  const hamburger = document.querySelector(".hamburger"); 
+  
+  if (navLinks.classList.contains("active") && 
+      !navLinks.contains(e.target) && 
+      !hamburger.contains(e.target)) {
+      
+    navLinks.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
 const revealOptions = {
   threshold: 0.12,
   rootMargin: "0px 0px -50px 0px"
